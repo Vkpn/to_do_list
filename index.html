@@ -13,21 +13,26 @@
         <h1>To Do List</h1>
     </header>
     <main class="principal">
-        <div class="instruçao">
-            <ol>
-                <li> Selecione um numero de itens. </li>
-                <li>Clique em "+" para adicionar os itens no final da lista.</li>
-                <li>Clique em "-" para retirar os itens no final da lista.</li>
-            </ol>
-        </div>
-        <div class="formulario">
-            <input type="number" name="" id="">
-            <input type="button" value="+">
-            <input type="button" value="-">
+        <div class="supra">
+            <div class="instruçao">
+                <ol>
+                    <li> Selecione um numero de itens. </li>
+                    <li>Clique em "+" para adicionar os itens no final da lista.</li>
+                    <li>Clique em "-" para retirar os itens no final da lista.</li>
+                </ol>
+            </div>
+            <div class="formulario">
+                <input type="number" name="quant" id="quant" min="1">
+                <div class="bot">   
+                    <input class="botoes" type="button" value="+">
+                    <input class="botoes" type="button" value="-">
+                </div> 
+            </div>
         </div>
         <div class="resultado">
         </div>
     </main>
+    
     <script src="to_do_list.js"></script>
 </body>
 </html>
