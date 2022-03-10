@@ -9,12 +9,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>To Do List</h1>
-    </header>
+    <h1>To Do List</h1>
     <main class="principal">
         <div class="supra">
-            <div class="instruçao">
+            <div class="inst">
                 <ol>
                     <li> Selecione um numero de itens. </li>
                     <li>Clique em "+" para adicionar os itens no final da lista.</li>
@@ -22,17 +20,18 @@
                 </ol>
             </div>
             <div class="formulario">
-                <input type="number" name="quant" id="quant" min="1">
+                <input type="number" name="quant" id="quant" min="1" max="10" placeholder="1">
                 <div class="bot">   
                     <input class="botoes" type="button" value="+">
                     <input class="botoes" type="button" value="-">
                 </div> 
             </div>
         </div>
+        <hr>
+        <h2>Lista</h2>
         <div class="resultado">
         </div>
     </main>
-    
     <script src="to_do_list.js"></script>
 </body>
 </html>

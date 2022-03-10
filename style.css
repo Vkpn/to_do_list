@@ -9,8 +9,8 @@
     --lista: 'Handlee', cursive; 
 
     --claro: #deebdd;
-    --verdeclaro: #6AB547;
-    --verdeescuro: #628B48;
+    --azulclaro: #9bb2b9;
+    --azulescuro: #171870;
     --marrom: #472209;
     --escuro: #130400;
 }
@@ -21,102 +21,142 @@
     font-family: sans-serif;
 }
 
-body{
+body{ /*----------------------------------------------------------- background */
     background-color: var(--claro);
-    background-image: url(mesa.jpg);
+    background-image: url(imagens/mesa.jpg);
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-size: cover;
+    background-attachment: fixed;
     background-position: left center;
-
-    backdrop-filter: blur(2px);
-
     display: flex;
     flex-direction: column;
-   
-    height: 100vh;
 }
 
-header{
-    z-index: 1;
-    height: 0px;
-    width: 0px;
-    position: absolute;
-}
-
-h1{
+h1{ /*----------------------------------------------------------- titulo */
     font-family: var(--titulo);
-    font-size: 90px;
-
-    transform: rotate(-15deg);
-
-    margin-top: 30px;
-    
-    height: 30px;
+    font-size: 6rem;
+    text-shadow: 1px 7px 15px var(--escuro);
+    transform: rotate(-30deg);
     width: 500px;
-    
-    text-shadow: 10px 12px 10px #00000080;
-
-    position: fixed;
-    clear: left;
+    margin: 50px 5px 20px;
 }
 
-.principal{
-    background-image: linear-gradient(to bottom, #fff5f5, #e7e7e7);
-    box-shadow: black 0.2px 0.2px 6px 0.2px;
-    border-radius: 3px;
-    border-top-left-radius: 1px;
-    border-bottom-right-radius: 2px;
+@media (max-width: 1200px) { /*----------------------------------------------------------- media para o titulo */
+    h1{
+        font-size: 4rem;
+        transform: rotate(-10deg);
+        width: 300px;
+        align-self: center;
+        margin: 10px 0px;
+    }
+}
 
-    width: 800px;
-    height: 700px;
-    padding: 10px;
-
+.principal{ /*----------------------------------------------------------- parte clara do site */
+    background-image: linear-gradient(to bottom, white,rgb(212, 207, 207));
+    width: 900px;
+    max-width: 96vw;
     align-self: center;
-    
-
-    display: flex;
+    border-radius: 3px 3px 5px 3px;
+    box-shadow: 0px 0px 15px 1px var(--escuro);
+    padding: 10px;
 }
 
-.supra{
+.supra{ /* ----------------------------------------------------------- parte superior da principal */
+    display: flex;
+    justify-content: space-between; 
+}
+
+.inst{ /* ----------------------------------------------------------- instruçoes */
+    padding: 5px;
+    min-width: 455px;
+    border: 1px dashed black;
+    list-style-position: inside;
+}
+
+.inst>ol>li{ /* ----------------------------------------------------------- itens das instruçoes */
+    font-family: var(--lista);
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.274);
+}
+
+@media (max-width: 700px) { /* ----------------------------------------------------------- media itens das instruçoes */
+    
+    .inst{
+        min-width: 355px;
+        display: flex;
+        align-items: center;
+    }
+    .inst>ol>li{
+        font-size: 1rem;
+        margin: 4px 0px;
+    }    
+}
+
+.formulario{ /* ----------------------------------------------------------- div itens formulário */
     flex-grow: 1;
-    
-    display: flex;
-
-    justify-content: space-between;
-    
-    border: 1px solid black;
-}
-
-.instruçao{
-    padding: 5px 0px 0px 20px;
-    border: 1px solid black;
-}
-
-.formulario{
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    align-items: center;
+    padding: 0px 5px;
 }
 
-#quant{
-    height: 30px;
-    align-self: center;
+#quant{ /* ----------------------------------------------------------- input numero */
+    height: 42px;
+    margin-bottom: 5px;
     text-align: center;
-    border-radius: 5px;
-    width: 166px;
-    
+    font-size: 2rem;
+    width: 100%;
 }
 
-.bot{
+.bot{ /* ----------------------------------------------------------- div dos botoes */
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border: 1px solid black;
+
+}
+
+.botoes{ /* ----------------------------------------------------------- botoes */
     flex-grow: 1;
-    align-self: center;
-    align-items: flex-start; 
+    height: 40px;
+    font-size: 2rem;
 }
 
-.botoes{
-    width: 85px;
-    border-radius: 5px;
+hr{ /* ----------------------------------------------------------- linha */
+    margin: 20px auto 5px;
+    border: .5px solid var(--azulescuro);
+    max-width: 800px;
 }
 
+h2{ /* ----------------------------------------------------------- h2 lista */
+    font-family: var(--titulo);
+    font-size: 3rem;
+    transform: rotate(-12deg);
+    width: 20px;
+    height: 35px;
+    margin: 0px 20px 20px;
+}
+
+@media (max-width: 1200px) { /* ----------------------------------------------------------- media h2 lista */
+    h2{
+        margin: 10px 0px;
+        font-size: 2rem;
+    }
+}
+
+.resultado{
+    border: 1px solid black;
+    height: 300px;
+}
+
+
+
+/* Ajustando a div resultado*/
+
+
+
+
+/* ----------------------------------------------------------- Background */
+
+/* border: 1px solid black; */
