@@ -41,13 +41,13 @@ h1{ /*----------------------------------------------------------- titulo */
     margin: 50px 5px 20px;
 }
 
-@media (max-width: 1200px) { /*----------------------------------------------------------- media para o titulo */
+@media (max-width: 1470px) { /*----------------------------------------------------------- media para o titulo */
     h1{
         font-size: 4rem;
         transform: rotate(-10deg);
         width: 300px;
         align-self: center;
-        margin: 10px 0px;
+        margin: 10px 0px 90px;
     }
 }
 
@@ -59,11 +59,18 @@ h1{ /*----------------------------------------------------------- titulo */
     border-radius: 3px 3px 5px 3px;
     box-shadow: 0px 0px 15px 1px var(--escuro);
     padding: 10px;
+    margin-top: -80px;
 }
 
 .supra{ /* ----------------------------------------------------------- parte superior da principal */
     display: flex;
     justify-content: space-between; 
+}
+
+@media (max-width: 700px) {
+    .supra{
+        flex-direction: column;
+    }
 }
 
 .inst{ /* ----------------------------------------------------------- instruçoes */
@@ -83,12 +90,13 @@ h1{ /*----------------------------------------------------------- titulo */
 @media (max-width: 700px) { /* ----------------------------------------------------------- media itens das instruçoes */
     
     .inst{
-        min-width: 355px;
+        min-width: 340px;
         display: flex;
         align-items: center;
+        margin: 5px 4px 
     }
     .inst>ol>li{
-        font-size: 1rem;
+        font-size: 1.3rem;
         margin: 4px 0px;
     }    
 }
@@ -101,20 +109,20 @@ h1{ /*----------------------------------------------------------- titulo */
     padding: 0px 5px;
 }
 
-#quant{ /* ----------------------------------------------------------- input numero */
-    height: 42px;
-    margin-bottom: 5px;
+#fitem{ /* ----------------------------------------------------------- input item */
+    height: 47px;
+    margin-bottom: 7px;
     text-align: center;
     font-size: 2rem;
     width: 100%;
+    font-family: var(--lista);
+    box-sizing: border-box;
 }
 
 .bot{ /* ----------------------------------------------------------- div dos botoes */
     display: flex;
     width: 100%;
     justify-content: space-between;
-    border: 1px solid black;
-
 }
 
 .botoes{ /* ----------------------------------------------------------- botoes */
@@ -132,6 +140,7 @@ hr{ /* ----------------------------------------------------------- linha */
 h2{ /* ----------------------------------------------------------- h2 lista */
     font-family: var(--titulo);
     font-size: 3rem;
+    color: var(--azulescuro);
     transform: rotate(-12deg);
     width: 20px;
     height: 35px;
@@ -145,16 +154,38 @@ h2{ /* ----------------------------------------------------------- h2 lista */
     }
 }
 
-.resultado{
-    border: 1px solid black;
-    height: 300px;
+#nomelista{ /* ----------------------------------------------------------- h3 */
+    font-family: var(--titulo);
+    text-align: center;
+    font-size: 2rem;
+    color: var(--azulescuro);
+    margin-top: -30px;
 }
 
+.resultado{ /* ----------------------------------------------------------- div do resultado */
+    min-height: 30vh;
+    padding: 5px;
+    list-style-position: inside;
+}
 
+.resultado>ul>li{ /* ----------------------------------------------------------- itens do resultado */
+    font-family: var(--lista);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: underline;
+    list-style-type: none;
+    color: var(--azulescuro);
+}
 
-/* Ajustando a div resultado*/
+@media (max-width: 700px) { /* ----------------------------------------------------------- media dos itens do resultado */
+    .resultado>ul>li{
+        font-size: 1rem;
+    }
+}
 
-
+.fcheck{
+    margin: 10px 10px 5px 15px; /* ----------------------------------------------------------- alinhamento do checkbox */
+}
 
 
 /* ----------------------------------------------------------- Background */

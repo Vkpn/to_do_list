@@ -14,22 +14,25 @@
         <div class="supra">
             <div class="inst">
                 <ol>
-                    <li> Selecione um numero de itens. </li>
-                    <li>Clique em "+" para adicionar os itens no final da lista.</li>
-                    <li>Clique em "-" para retirar os itens no final da lista.</li>
+                    <li>Escreva o nomedo item a ser adicionado.</li>
+                    <li>Clique em "+" para adicionar no final da lista.</li>
+                    <li>Selecione o(s) item(s) Clique em "-" para excluir.</li>
                 </ol>
             </div>
             <div class="formulario">
-                <input type="number" name="quant" id="quant" min="1" max="10" placeholder="1">
+                <input type="text" name="item" id="fitem">
                 <div class="bot">   
-                    <input class="botoes" type="button" value="+">
-                    <input class="botoes" type="button" value="-">
+                    <input class="botoes" type="button" value="+" onclick="add()">
+                    <input class="botoes" type="button" value="-" onclick="delet()">
                 </div> 
             </div>
         </div>
         <hr>
         <h2>Lista</h2>
+        <h3 id="nomelista"></h3>
         <div class="resultado">
+            <ul id="fres">
+            </ul>
         </div>
     </main>
     <script src="to_do_list.js"></script>
