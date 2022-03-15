@@ -30,10 +30,13 @@ function del(){
     if(itdel == 0 || itdel > cont){
         window.alert(`[ERRO]\n\nDigite o numero do item a ser deletado!`)
     } else {
+        document.getElementById(`fitem`).value=``
+        document.getElementById(`fitem`).focus()
         document.getElementById(itdel).remove(this)
         cont -= 1
-        for(nextid; nextid < 100; nextid+=1){
+        for(nextid; nextid <= 50; nextid+=1){
             document.getElementById(nextid).id = `${nextid-1}`
         }
+    
     }
-}
+}       
