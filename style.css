@@ -76,7 +76,7 @@ h1{ /*----------------------------------------------------------- titulo */
 .inst{ /* ----------------------------------------------------------- instruçoes */
     padding: 5px;
     min-width: 455px;
-    border: 1px dashed black;
+    border: 1px dashed var(--azulclaro);
     list-style-position: inside;
 }
 
@@ -129,6 +129,15 @@ h1{ /*----------------------------------------------------------- titulo */
     flex-grow: 1;
     height: 40px;
     font-size: 2rem;
+    border-radius: 2px;
+}
+
+.add{
+    background-color: #23259160;
+}
+
+.del{
+    background-color: #6e350f38;
 }
 
 hr{ /* ----------------------------------------------------------- linha */
@@ -150,16 +159,24 @@ h2{ /* ----------------------------------------------------------- h2 lista */
 @media (max-width: 1200px) { /* ----------------------------------------------------------- media h2 lista */
     h2{
         margin: 10px 0px;
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 }
 
 #nomelista{ /* ----------------------------------------------------------- h3 */
     font-family: var(--titulo);
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--azulescuro);
     margin-top: -30px;
+}
+
+@media (max-width: 700px) {
+    #nomelista{
+        text-align: end;
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
 }
 
 .resultado{ /* ----------------------------------------------------------- div do resultado */
@@ -176,16 +193,13 @@ h2{ /* ----------------------------------------------------------- h2 lista */
     color: var(--azulescuro);
     list-style-type: decimal;
     word-spacing: 5px;
+    border-bottom: 1px solid #6363631a;
 }
 
 @media (max-width: 700px) { /* ----------------------------------------------------------- media dos itens do resultado */
     .resultado>ul>li{
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
-}
-
-.resultado>ul>li:hover{
-    color: var(--azulclaro);
 }
 
 

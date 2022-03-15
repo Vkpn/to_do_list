@@ -1,10 +1,9 @@
 var item = document.getElementById(`fitem`)
 var res = document.getElementById(`fres`)
-// var titulo = prompt(`Qual o nome da sua lista? \n`) ------------------------------------------------------------------
-var ordem = []
+var titulo = prompt(`Qual o nome da sua lista? \n`)
 var cont = 0
 
-document.getElementById(`nomelista`).innerHTML = `${titulo.charAt(0).toUpperCase()+titulo.slice(1).toLowerCase()}`
+document.getElementById(`nomelista`).innerHTML = `${titulo.charAt(0).toUpperCase()+titulo.slice(1).toLowerCase()}:`
 
 function add(){
 
@@ -15,22 +14,26 @@ function add(){
     } else {
         var itemadc = document.createElement(`li`)
         itemadc.innerHTML = `${it.charAt(0).toUpperCase()+it.slice(1).toLowerCase()}`
+        itemadc.id = `${cont+1}`
         res.appendChild(itemadc)
         document.getElementById(`fitem`).value=``
         document.getElementById(`fitem`).focus()
         cont += 1
-        ordem.push(cont)
     }
-
 }
 
 function del(){
-
-
     
+    itdel = Number(item.value)
+    var nextid = itdel+1
 
-
+    if(itdel == 0 || itdel > cont){
+        window.alert(`[ERRO]\n\nDigite o numero do item a ser deletado!`)
+    } else {
+        document.getElementById(itdel).remove(this)
+        cont -= 1
+        for(nextid; nextid < 100; nextid+=1){
+            document.getElementById(nextid).id = `${nextid-1}`
+        }
+    }
 }
-
-
-// terminar a funçao del
