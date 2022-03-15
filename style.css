@@ -173,8 +173,9 @@ h2{ /* ----------------------------------------------------------- h2 lista */
     font-size: 1.3rem;
     font-weight: bold;
     text-decoration: underline;
-    list-style-type: none;
     color: var(--azulescuro);
+    list-style-type: decimal;
+    word-spacing: 5px;
 }
 
 @media (max-width: 700px) { /* ----------------------------------------------------------- media dos itens do resultado */
@@ -183,9 +184,10 @@ h2{ /* ----------------------------------------------------------- h2 lista */
     }
 }
 
-.fcheck{
-    margin: 10px 10px 5px 15px; /* ----------------------------------------------------------- alinhamento do checkbox */
+.resultado>ul>li:hover{
+    color: var(--azulclaro);
 }
+
 
 
 /* ----------------------------------------------------------- Background */

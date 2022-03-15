@@ -1,31 +1,36 @@
-var it = document.getElementById(`fitem`)
+var item = document.getElementById(`fitem`)
 var res = document.getElementById(`fres`)
-//var nome = prompt(`Qual será o nome da sua lista?\n`)
+// var titulo = prompt(`Qual o nome da sua lista? \n`) ------------------------------------------------------------------
+var ordem = []
+var cont = 0
 
-document.getElementById(`nomelista`).innerHTML = `${nome.toUpperCase()}`
+document.getElementById(`nomelista`).innerHTML = `${titulo.charAt(0).toUpperCase()+titulo.slice(1).toLowerCase()}`
 
 function add(){
 
-    var item = String(it.value)
+    it = String(item.value)
 
-    if (item == 0) {
-        window.alert(`[ERRO] \n\nFavor preencher um item a ser adicionado na lista!`)
+    if(it == 0){
+        window.alert(`[ERRO]\n\nDigite o item a ser inserido na lista!`)
     } else {
-        var itemadd = document.createElement(`li`)
-        itemadd.innerHTML = `<input type="checkbox" class="fcheck">${item.charAt(0).toUpperCase()+item.slice(1).toLowerCase()}`
-        res.appendChild(itemadd)
-        document.getElementById(`fitem`).value = ``
+        var itemadc = document.createElement(`li`)
+        itemadc.innerHTML = `${it.charAt(0).toUpperCase()+it.slice(1).toLowerCase()}`
+        res.appendChild(itemadc)
+        document.getElementById(`fitem`).value=``
         document.getElementById(`fitem`).focus()
         cont += 1
+        ordem.push(cont)
     }
-}
-
-function delet() {
-
-    window.alert(cont)
-
-
 
 }
 
-// criar a funçao delet
+function del(){
+
+
+    
+
+
+}
+
+
+// terminar a funçao del
