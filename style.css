@@ -89,21 +89,14 @@ h1{ /*----------------------------------------------------------- titulo */
     cursor: help;
 }
 
-@media (max-width: 845px) { /* ----------------------------------------------------------- media itens das instruçoes */
+@media (max-width: 700px) { /* ----------------------------------------------------------- media itens das instruçoes */
     
     .inst{
         display: flex;
         margin: 5px 4px;
     }
     .inst>ol>li{
-        font-size: 1.4rem;
-    }    
-}
-
-@media (max-width: 700px) {
-
-    .inst>ol>li{
-        font-size: 1rem;
+        font-size: 1.1rem;
         margin: 4px 0px;
     }    
 }
