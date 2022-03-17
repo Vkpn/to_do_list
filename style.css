@@ -67,7 +67,7 @@ h1{ /*----------------------------------------------------------- titulo */
     justify-content: space-between; 
 }
 
-@media (max-width: 700px) {
+@media (max-width: 845px) {
     .supra{
         flex-direction: column;
     }
@@ -85,18 +85,25 @@ h1{ /*----------------------------------------------------------- titulo */
     font-weight: bold;
     font-size: 1.3rem;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.274);
+    color: var(--azulescuro);
+    cursor: help;
 }
 
-@media (max-width: 700px) { /* ----------------------------------------------------------- media itens das instruçoes */
+@media (max-width: 845px) { /* ----------------------------------------------------------- media itens das instruçoes */
     
     .inst{
-        min-width: 340px;
         display: flex;
-        align-items: center;
-        margin: 5px 4px 
+        margin: 5px 4px;
     }
     .inst>ol>li{
-        font-size: 1.3rem;
+        font-size: 1.5rem;
+    }    
+}
+
+@media (max-width: 700px) {
+
+    .inst>ol>li{
+        font-size: 1.1rem;
         margin: 4px 0px;
     }    
 }
@@ -117,27 +124,41 @@ h1{ /*----------------------------------------------------------- titulo */
     width: 100%;
     font-family: var(--lista);
     box-sizing: border-box;
+    border-radius: 4px;
+    cursor: text;
 }
 
 .bot{ /* ----------------------------------------------------------- div dos botoes */
     display: flex;
     width: 100%;
     justify-content: space-between;
+    gap: 5px;
 }
 
 .botoes{ /* ----------------------------------------------------------- botoes */
     flex-grow: 1;
     height: 40px;
     font-size: 2rem;
-    border-radius: 2px;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 .add{
     background-color: #23259160;
 }
 
+.add:hover{
+    background-color: var(--azulescuro);
+    color: var(--claro);
+}
+
 .del{
     background-color: #6e350f38;
+}
+
+.del:hover{
+    background-color: var(--marrom);
+    color: var(--claro);
 }
 
 hr{ /* ----------------------------------------------------------- linha */
@@ -196,14 +217,16 @@ h2{ /* ----------------------------------------------------------- h2 lista */
     border-bottom: 1px solid #6363631a;
 }
 
+.resultado>ul>li:hover{
+    color: var(--azulclaro);
+    font-size: 1.8rem;
+    transition: .2s;
+    transition-delay: .3s;
+    cursor: pointer;
+}
+
 @media (max-width: 700px) { /* ----------------------------------------------------------- media dos itens do resultado */
     .resultado>ul>li{
         font-size: 1.3rem;
     }
 }
-
-
-
-/* ----------------------------------------------------------- Background */
-
-/* border: 1px solid black; */
