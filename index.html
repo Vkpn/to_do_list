@@ -16,20 +16,22 @@
                 <ol>
                     <li>Escreva o nome do item a ser adicionado.</li>
                     <li>Clique em "+" para adicionar no final da lista.</li>
-                    <li>Para excluir digite o numero do item e depois clique em "-" .</li>
+                    <li>Digite o numero do item a ser excluido. </li>
+                    <li>Clique em "-" p/ excluir.</li>
                 </ol>
             </div>
             <div class="formulario">
-                <input type="text" name="item" id="fitem" maxlength="28">
+                <input type="text" name="item" id="fitem" maxlength="28" submit>
                 <div class="bot">   
                     <input class="botoes add" type="button" value="+" onclick="add()">
-                    <input class="botoes del" type="button" value="-" onclick="del()">
+                    <input class="botoes del" type="button" value="-" onclick="del()">               
                 </div> 
+                <input class="imprimir" type="button" value="imprimir" id="imprimir" onclick="imprimir()">
             </div>
         </div>
         <hr>
         <h2>Lista</h2>
-        <h3 id="nomelista"></h3>
+        <h3 id="nomelista">Lista sem nome:</h3>
         <div class="resultado">
             <ul id="fres">
             </ul>

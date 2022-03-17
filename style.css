@@ -67,7 +67,7 @@ h1{ /*----------------------------------------------------------- titulo */
     justify-content: space-between; 
 }
 
-@media (max-width: 845px) {
+@media (max-width: 700px) {
     .supra{
         flex-direction: column;
     }
@@ -75,7 +75,7 @@ h1{ /*----------------------------------------------------------- titulo */
 
 .inst{ /* ----------------------------------------------------------- instruçoes */
     padding: 5px;
-    min-width: 455px;
+    min-width: 400px;
     border: 1px dashed var(--azulclaro);
     list-style-position: inside;
 }
@@ -83,7 +83,7 @@ h1{ /*----------------------------------------------------------- titulo */
 .inst>ol>li{ /* ----------------------------------------------------------- itens das instruçoes */
     font-family: var(--lista);
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.274);
     color: var(--azulescuro);
     cursor: help;
@@ -96,8 +96,8 @@ h1{ /*----------------------------------------------------------- titulo */
         margin: 5px 4px;
     }
     .inst>ol>li{
-        font-size: 1rem;
-        margin: 4px 0px;
+        font-size: 1.2rem;
+        margin: 2px 0px;
     }    
 }
 
@@ -110,7 +110,7 @@ h1{ /*----------------------------------------------------------- titulo */
 }
 
 #fitem{ /* ----------------------------------------------------------- input item */
-    height: 47px;
+    height: 35px;
     margin-bottom: 7px;
     text-align: center;
     font-size: 2rem;
@@ -130,7 +130,7 @@ h1{ /*----------------------------------------------------------- titulo */
 
 .botoes{ /* ----------------------------------------------------------- botoes */
     flex-grow: 1;
-    height: 40px;
+    height: 35px;
     font-size: 2rem;
     border-radius: 4px;
     cursor: pointer;
@@ -151,6 +151,21 @@ h1{ /*----------------------------------------------------------- titulo */
 
 .del:hover{
     background-color: var(--marrom);
+    color: var(--claro);
+}
+
+.imprimir{
+    margin-top: 5px;
+    width: 100%;
+    height: 35px;
+    border-radius: 4px;
+    background-color: #8080803d;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.imprimir:hover{
+    background-color: #808080;
     color: var(--claro);
 }
 
@@ -222,4 +237,9 @@ h2{ /* ----------------------------------------------------------- h2 lista */
     .resultado>ul>li{
         font-size: 1.3rem;
     }
+}
+
+#checkbox{
+    display: none;
+    
 }
