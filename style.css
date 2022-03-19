@@ -75,7 +75,7 @@ h1{ /*----------------------------------------------------------- titulo */
 
 .inst{ /* ----------------------------------------------------------- instruçoes */
     padding: 5px;
-    min-width: 400px;
+    flex-shrink: 0;
     border: 1px dashed var(--azulclaro);
     list-style-position: inside;
 }
